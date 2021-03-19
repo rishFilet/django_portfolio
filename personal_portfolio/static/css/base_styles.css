@@ -31,7 +31,7 @@ p {
   letter-spacing: 2;
 }
 .navbar-bar{
-  background-color: #276678;
+  background-color: #FFF;
 }
 
 .nav-contents {
@@ -63,7 +63,7 @@ p {
 
 .small-text {
   font-size:10px;
-  font-weight: 400;
+  font-weight: 600;
   font-style: italic;
   text-align: center;
 }
@@ -102,6 +102,15 @@ p {
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
 
+}
+
+.highlighted-text {
+  background:gold;
+  color: black;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 5px;
+  font-style: normal;
 }
 
 .profile-pic-row{
@@ -184,12 +193,39 @@ p {
   font-size: 20px;
 }
 
+.handpoint-footer {
+  position: fixed;
+  width: 100px;
+  bottom: 0;
+  left: 0;
+
+}
+
+.hire-me-button {
+border-radius: 15px;
+  background-color: gold;
+  color: black;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 200;
+  text-decoration: italic;
+  letter-spacing: 0.5;
+  border: 0px solid black;
+  position: fixed;
+  bottom: 40px;
+  left: 100px;
+}
+
 .footer {
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #276678;
-  color: white;
+  background-color: #FFF;
+  color: black;
   text-align: center;
+  font-size: 10px;
+  font-weight: 300;
+  font-style: italic;
+  height: 30px;
 }

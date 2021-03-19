@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/eos-icons/dist/css/eos-icons.css' />
 <link rel="stylesheet" type="text/css" href="{% static 'css/base_styles.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}" />
 
@@ -71,13 +72,13 @@
                                 </div>
                             </div>
                             <h3 style="text-align: center">Rishi Khan</h3>
-                            <p class="small-text">Engineer | Software, Devops, AWS, Automation, IOT, Cybersecurity, Web
+                            <p class="small-text"> <span class="highlighted-text">Engineer</span> Software, Devops, AWS, Automation, IOT, Cybersecurity, Web
                             </p>
-                            <p class="small-text">Mentor | Toronto Tech Mentoring, Sustainable Engineers Association</p>
-                            <p class="small-text">Space Nerd | International Space University, OuterAI</p>
-                            <p class="small-text">Volunteer | Windaid Insitute, CivicTechTO</p>
-                            <p class="small-text">Gamer | Company of Heroes 2, FTL</p>
-                            <p class="small-text">Cyclist | Kona Rove 2018</p>
+                            <p class="small-text"><span class="highlighted-text">Mentor</span> Toronto Tech Mentoring, Sustainable Engineers Association</p>
+                            <p class="small-text"><span class="highlighted-text">Space Nerd</span> International Space University, OuterAI</p>
+                            <p class="small-text"><span class="highlighted-text">Volunteer</span> Windaid Insitute, CivicTechTO</p>
+                            <p class="small-text"><span class="highlighted-text">Gamer</span> Company of Heroes 2, FTL</p>
+                            <p class="small-text"><span class="highlighted-text">Cyclist</span> Kona Rove 2018</p>
 
                             <!-- <p>I build things in python (mostly). I like experimenting with software infrastructure and
                                 architechture. I
@@ -129,7 +130,17 @@
     </div>
 </div>
 <div class="footer">
-    <p>Copyright 2021 Rishi Khan. Made with Django & Bootstrap 4</p>
+    <div class="row">
+        <div class="col-1">
+            <img class='handpoint-footer' src='{% static "img/handpoint.png" %}' alt="hire me">
+        </div>
+        <div class="col-1">
+            <button class="hire-me-button btn shadow rounded">Hire me for contract work</button>
+        </div>
+        <div class="col-8">
+                <p><span>Copyright 2021 Rishi Khan. Made with Django & Bootstrap 4</span></p>
+        </div>
+    </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

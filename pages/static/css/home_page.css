@@ -7,11 +7,18 @@
     width: 100%;
 }
 
+.project-icon {
+    width: 9%;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
 .card-body {
-    background-color: #f4f6ff;
+    background-color: #FFF;
 }
 
 .card-header {
-        background-color: #f3c623;
+    background-color: #fddb3a;
 
 }
+

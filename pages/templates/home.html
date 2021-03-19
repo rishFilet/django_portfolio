@@ -20,7 +20,7 @@
 
         <div class="col-6">
             <div class="card shadow mb-5 bg-white rounded">
-                <h2 class="card-header">Latest Project</h2>
+                <h2 class="card-header"><img src='{% static "img/rotating_gear.svg" %}' class="project-icon"/>Latest Project</h2>
                 <div class="card-body">
                     <h1 class="card-title">This website</h1>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
@@ -33,7 +33,7 @@
         </div>
         <div class="col-6">
             <div class="card shadow mb-5 bg-white rounded">
-                <h2 class="card-header">Latest Blog post</h2>
+                <h2 class="card-header"><img src='{% static "img/typing.svg" %}' class="project-icon" />Latest Blog post</h2>
                 <div class="card-body">
                     <h1 class="card-title">Some shit i thought of about engineering</h1>
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.
@@ -45,10 +45,10 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col-2">
-                <img class='icon' src='{% static "img/lightbulb2.png" %}' alt="why open sourcery">
+            <div class="col-1">
+                <img class='icon' src='{% static "img/open_source.png" %}' alt="why open sourcery">
             </div>
-            <div class="col-10">
+            <div class="col-8">
                 <h2>Why Open Sourcery?</h2>
                 <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
                     parturient montes,
@@ -56,18 +56,28 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col-10">
-                <h2 class="text-right">About Me</h2>
-                <p class="text-right">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+            <div class="col-1">
+                <img class='icon' src='{% static "img/filet-o-fish.png" %}' alt="about me">
+            </div>
+            <div class="col-8">
+                <h2>About Me</h2>
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
                     penatibus et
                     magnis dis parturient
                     montes,
                     nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
             </div>
-            <div class="col-2">
-                <img class='icon' src='{% static "img/code.png" %}' alt="about me">
-            </div>
+
         </div>
+        <!-- <div class="row py-5">
+            <div class="col-3">
+                <img class='icon' src='{% static "img/handpoint.png" %}' alt="hire me">
+            </div>
+            <div class="col-8">
+                <button class="hire-me-button btn shadow rounded">Hire me for contract work</button>
+            </div>
+
+        </div> -->
 
     </div>
     {% endblock %}
