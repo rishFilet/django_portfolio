@@ -3,8 +3,9 @@
 {% block page_content %}
 
 <div class="container-fluid">
-    <div class=row>
-        <div class="col-8">
+    <div class="row py-5">
+        <!-- This can be used later as a card for showing photos -->
+        <!-- <div class="col-8">
             <div class="card mb-3">
                 <img class='week-img' src='{% static "img/streetcars.jpg" %}' alt="photo of the week">
                 <div class="card-body">
@@ -15,18 +16,58 @@
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="col-4">
-            <div class="card">
-                <h5 class="card-header">Featured</h5>
+        <div class="col-6">
+            <div class="card shadow mb-5 bg-white rounded">
+                <h2 class="card-header">Latest Project</h2>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Show mw what you got</a>
+                    <h1 class="card-title">This website</h1>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
                 </div>
             </div>
         </div>
+        <div class="col-6">
+            <div class="card shadow mb-5 bg-white rounded">
+                <h2 class="card-header">Latest Blog post</h2>
+                <div class="card-body">
+                    <h1 class="card-title">Some shit i thought of about engineering</h1>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Last updated 3 mins ago</small>
+                </div>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-2">
+                <img class='icon' src='{% static "img/lightbulb2.png" %}' alt="why open sourcery">
+            </div>
+            <div class="col-10">
+                <h2>Why Open Sourcery?</h2>
+                <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis
+                    parturient montes,
+                    nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+        </div>
+        <div class="row py-5">
+            <div class="col-10">
+                <h2 class="text-right">About Me</h2>
+                <p class="text-right">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque
+                    penatibus et
+                    magnis dis parturient
+                    montes,
+                    nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <div class="col-2">
+                <img class='icon' src='{% static "img/code.png" %}' alt="about me">
+            </div>
+        </div>
+
     </div>
-</div>
-{% endblock %}
+    {% endblock %}

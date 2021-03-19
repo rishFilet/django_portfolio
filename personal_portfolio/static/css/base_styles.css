@@ -1,7 +1,72 @@
-/*
-body{
-  padding-top: 100px;
-} */
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+h1{
+  font-family: 'Montserrat';
+  font-size: 32px;
+}
+
+h2 {
+  font-family: 'Lato';
+  font-size: 24px;
+}
+
+h3 {
+  font-family: 'Raleway';
+  font-size: 15px;
+  font-weight: 700;
+}
+
+p {
+    font-family: 'Raleway';
+}
+
+.logo-text {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2;
+}
+.navbar-bar{
+  background-color: #276678;
+}
+
+.nav-contents {
+  line-height: 50px;
+}
+
+.nav-text {
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: #f6f5f5;
+  letter-spacing: 1;
+  padding-left:15px;
+  padding-right: 15px;
+}
+
+.sponsor-button {
+  border-radius: 15px;
+  background-color: gold;
+  color: black;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 200;
+  text-decoration: italic;
+  letter-spacing: 0.5;
+  border: 0px solid black;
+}
+
+.small-text {
+  font-size:10px;
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+}
 
 .page-container {
   margin-left: 20px;
@@ -12,7 +77,8 @@ body{
     bottom: 0;
     position: relative;
     width: auto;
-    height: auto
+    height: auto;
+
 }
 
 .page-content{
@@ -28,7 +94,7 @@ body{
 
 .sidebar-contents {
   height: 100%; /* Full-height: remove this if you want "auto" height */
-  width: 100%; /* Set the width of the sidebar */
+  width: 50%; /* Set the width of the sidebar */
   z-index: 1; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0;
@@ -37,13 +103,40 @@ body{
   padding-top: 20px;
 
 }
+
+.profile-pic-row{
+  justify-content: center;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.profile-pic{
+  width:100%;
+  justify-content: center;
+}
+
+.fa-col {
+  display:flex;
+  padding-left: 0;
+  padding-right: 0;
+  justify-content: center;
+
+}
+
+.fa-row {
+  padding-top: 5px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
 /* Style all font awesome icons */
 .fa {
-  padding: 20px;
+  padding: 10px;
   font-size: 30px;
-  width: 100%;
+  /* width: 65%;
+  height: 65%; */
   text-align: center;
   text-decoration: none;
+   /* border-radius: 50%; */
 }
 
 /* Add a hover effect if you want */
@@ -55,12 +148,48 @@ body{
 
 /* Facebook */
 .fa-linkedin {
-  background: #2867B2;
-  color: white;
+  /* background: #2867B2; */
+  color: black;
 }
 
 /* Twitter */
 .fa-github {
-  background: #000;
+  /* background: #000; */
+  color: black;
+}
+
+.fa-instagram {
+  /* background: #833AB4; */
+  color: black;
+}
+
+.fa-rss {
+  /* background: #f26522; */
+  color: black;
+}
+
+.fa-steam {
+  /* background: #1b2838 ; */
+  color: black;
+}
+
+.fa-paper-plane-o {
+  /* background: #BB001B; */
+  color: black;
+}
+
+.fa-coffee {
+  /* background: #BB001B; */
+  color: black;
+  font-size: 20px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #276678;
   color: white;
+  text-align: center;
 }

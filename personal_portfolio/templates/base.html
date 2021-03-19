@@ -8,31 +8,31 @@
 
 <!-- <div class="container">
     <div class="row"> -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light navbar-bar fixed-top">
     <a class="navbar-brand" href="#">
-        <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top"
+        <img src="{% static 'img/os2.png' %}" width="30" height="30" class="d-inline-block align-top"
             alt="">
-        Open Sourcery
+        <span class="logo-text">OPEN SOURCERY</span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+        <ul class="navbar-nav ml-auto nav-contents">
+            <li class="nav-item nav-text">
                 <a class="nav-link" href="#">CV</a> <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-text">
                 <a class="nav-link" href="#">Blog</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Projects</a>
+            <li class="nav-item nav-text">
+                <a class="nav-link nav-text" href="#">Projects</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-text">
                 <a class="nav-link" href="#">Volunteering</a>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown nav-text">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Hobbies
@@ -50,7 +50,7 @@
                     <a class="dropdown-item" href="#">Latin Dancing</a>
                 </div>
             </li>
-            <button class="btn btn-outline-success" type="button">Sponsor</button>
+            <button class="btn sponsor-button shadow rounded" type="button"><i class="fa fa-coffee"></i></button>
         </ul>
     </div>
 </nav>
@@ -58,36 +58,78 @@
 </div> -->
 <div class="page-container">
     <div class="row">
+        <div class="col-4">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-5">
+                    <div class="sidebar-container">
+                        <div class="sidebar-contents">
+                            <div class="row profile-pic-row">
+                                <div class="col-9">
+                                    <img src='{% static "img/Rishi_profile.jpg" %}'
+                                        class="rounded-circle profile-pic">
+                                </div>
+                            </div>
+                            <h3 style="text-align: center">Rishi Khan</h3>
+                            <p class="small-text">Engineer | Software, Devops, AWS, Automation, IOT, Cybersecurity, Web
+                            </p>
+                            <p class="small-text">Mentor | Toronto Tech Mentoring, Sustainable Engineers Association</p>
+                            <p class="small-text">Space Nerd | International Space University, OuterAI</p>
+                            <p class="small-text">Volunteer | Windaid Insitute, CivicTechTO</p>
+                            <p class="small-text">Gamer | Company of Heroes 2, FTL</p>
+                            <p class="small-text">Cyclist | Kona Rove 2018</p>
 
-        <div class="col-3">
-            <div class="sidebar-container">
-                <div class="sidebar-contents">
-                    <h2> SIDEBAR STUFF </h2>
-                    <img src="https://www.tutorialspoint.com/videotutorials/images/numerical_ability_home.jpg"
-                        class="rounded-circle">
-                    <h3>Rishi Khan</h3>
-                    <h4>rishfilet</h4>
-                    <p>I build things in python (mostly). I like experimenting with software infrastructure and
-                        architechture. I
-                        support and contribute to open source. I volunteer my skills to subjectively worthy causes. My
-                        opinions
-                        are my own. I enjoy learning a lot, improving my skills and sharing that knowledge with others.
-                    </p>
-                    <a href="#" class="fa fa-linkedin"></a>
-                    <a href="#" class="fa fa-github"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-rss"></a>
-                    <a href="#" class="fa fa-steam-square"></a>
-                    <a href="#" class="fa fa-paper-plane-o">Open.sourcery@protonmail.com</a>
+                            <!-- <p>I build things in python (mostly). I like experimenting with software infrastructure and
+                                architechture. I
+                                support and contribute to open source. I volunteer my skills to subjectively worthy
+                                causes.
+                                My
+                                opinions
+                                are my own. I enjoy learning a lot, improving my skills and sharing that knowledge with
+                                others.
+                            </p> -->
+                            <div class="row fa-row">
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-linkedin"></a>
+                                </div>
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-github"></a>
+                                </div>
+
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-rss"></a>
+                                </div>
+                            </div>
+                            <div class="row fa-row">
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-instagram"></a>
+                                </div>
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-steam"></a>
+                                </div>
+
+                                <div class="col-4 fa-col">
+                                    <a href="#" class="fa fa-paper-plane-o"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-8">
+        <div class="col-5">
             <div class="page-content">
                 {% block page_content %}{% endblock %}
             </div>
         </div>
+        <div class="col-2">
+            <div class="page-content">
+            </div>
+        </div>
     </div>
+</div>
+<div class="footer">
+    <p>Copyright 2021 Rishi Khan. Made with Django & Bootstrap 4</p>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
