@@ -49,6 +49,11 @@ p {
   padding-right: 15px;
 }
 
+.active > .nav-link{
+  font-weight: 600;
+  border-bottom: 4px solid gold;
+}
+
 .sponsor-button {
   border-radius: 15px;
   background-color: gold;
@@ -182,7 +187,7 @@ p {
   color: black;
 }
 
-.fa-paper-plane-o {
+.fa-at {
   /* background: #BB001B; */
   color: black;
 }
