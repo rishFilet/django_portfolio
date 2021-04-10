@@ -6,9 +6,7 @@
 <link rel="stylesheet" type="text/css" href="{% static 'css/base_styles.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/home_page.css' %}" />
 <link rel="stylesheet" type="text/css" href="{% static 'css/project.css' %}" />
-
-<script src="{% static 'js/legend.js' %}"></script>
-
+<link rel="stylesheet" type="text/css" href="{% static 'css/cv.css' %}" />
 
 
 
@@ -25,9 +23,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto nav-contents">
-            {% url 'cv' as url %}
+            <!-- TODO: Add the urls to an array and have them programmatically populated based on if they have a view and pattern, probably can use pages.urls -->
+            {% url 'cv_page' as url %}
             <li class="nav-item nav-text">
-                <a class="nav-link" href="#">CV</a>
+                <a class="nav-link" href="{{ url }}">CV</a>
             </li>
             {% url 'blog' as url %}
             <li class="nav-item nav-text">
@@ -37,9 +36,9 @@
             <li class="nav-item nav-text {% if request.path == url %}active{% endif %}">
                 <a class="nav-link nav-text" href="{{ url }}">Projects</a>
             </li>
-            {% url 'volunteering' as url %}
+            {% url 'volunteer_page' as url %}
             <li class="nav-item nav-text">
-                <a class="nav-link" href="#">Volunteering</a>
+                <a class="nav-link" href="{{ url }}">Volunteering</a>
             </li>
             <li class="nav-item dropdown nav-text">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -130,12 +129,12 @@
                 </div>
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-7">
             <div class="page-content">
                 {% block page_content %}{% endblock %}
             </div>
         </div>
-        <div class="col-2">
+        <div class="col-1">
             <div class="page-content">
             </div>
         </div>

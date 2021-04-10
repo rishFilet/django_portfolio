@@ -1,9 +1,66 @@
-.status-icon {
-    width: 100%;
+
+.legend-row{
+    padding-top: 2rem;
+    padding-bottom: 0;
 }
 
+.legend-button{
+    background: gold;
+    border-radius: 10px;
+    padding: 10% 15% 10% 15%;
+    color: black;
+  font-family: 'Lato';
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 0.5;
+  border: 0px solid black;
+  text-transform: uppercase;
+
+}
+
+.legend-time-icon {
+    width: 30%
+}
+
+.legend-git {
+    font-size: 4rem;
+}
+
+/* In order to align items vertically in a column, use the align-items center with display flex */
+.legend-git-col {
+    display: flex;
+    align-items: center;
+}
+
+.legend-read-more {
+    width: 30%;
+}
+
+.legend-span {
+    padding-left: 0.5rem;
+    font-family: Raleway;
+    font-weight: 200;
+}
+
+.read-more {
+    width: 40%;
+    border-radius: 40px;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    border: 0.1px solid grey;
+}
+
+.read-more-col{
+    text-align: right;
+}
+
+
 .time-icon {
-    width: 20%;
+    width: 10%;
+}
+
+
+.project-card {
+    box-shadow: 0 .5rem 1rem rgba(0, 130, 0, 0.6);
 }
 
 .project-detail-icon-row {
@@ -12,4 +69,22 @@
 
 .project-detail-icon-col {
     padding-right: 0%
+}
+
+.card-status{
+    padding: 0;
+}
+
+.card-status > .row {
+    margin: 0;
+    justify-content: center;
+    text-transform: uppercase;
+    background: rgba(0, 255, 52, 0.1)
+}
+
+.card-status > .row > p {
+    margin-bottom: 0;
+    letter-spacing: 3px;
+    font-weight: 200;
+    font-size: 12px;
 }

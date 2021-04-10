@@ -2,23 +2,25 @@
 {% load static %}
 {% block page_content %}
 <div class="container-fluid">
-    <div class="row py-5">
-        <p>
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
-                aria-controls="collapseExample">
-                Link with href
-            </a>
-            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
-                aria-expanded="false" aria-controls="collapseExample">
-                Button with data-bs-target
-            </button>
-        </p>
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body">
-                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user
-                activates the relevant trigger.
-            </div>
+    <div class="row legend-row">
+        <div class="col-2"><button data-toggle="collapse" data-target="#legend-list"
+                class="legend-button shadow">legend</button>
         </div>
+        <div class="col">
+            <div id="legend-list" class="collapse">
+                            <div class="row">
+
+                <div class="col"><img src='{% static "img/abstract.svg" %}' class="legend-time-icon" /><span class="legend-span">10 hrs</span></div>
+                <div class="col"><img src='{% static "img/abstract_incomplete.svg" %}' class="legend-time-icon" /><span class="legend-span">5 hrs</span></div>
+
+                <div class="col legend-git-col"><a href="#" class="fa fa-github legend-git" style="padding:0"></a><span class="legend-span">Github Link</span></div>
+                <div class="col"><img src='{% static "img/arrow_circle_up.png" %}' class="legend-read-more"/><span class="legend-span">Read more</span></div>
+            </div>
+            </div>
+
+        </div>
+
+
     </div>
     <div class="row py-5">
         {% for project in projects %}
@@ -33,33 +35,34 @@
             </div>
         </div> -->
         <div class="col-md-4">
-            <div class="card">
+            <div class="card project-card">
                 <img src="{% static project.image %}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <div class="row project-detail-icon-row">
-                        <div class="col-3 project-detail-icon-col">
-                            <img src='{% static "img/rocket.gif" %}' class="status-icon" />
-
-                        </div>
-                        <div class="col-9">
+                        <div class="col">
                             <img src='{% static "img/abstract.svg" %}' class="time-icon" />
                             <img src='{% static "img/abstract_incomplete.svg" %}' class="time-icon" />
                         </div>
                     </div>
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.description }}</p>
-                    <a href="#" class="btn btn-primary">Read more</a>
-
-
-                </div>
-                <div class="card-footer text-muted">
                     <div class="row">
-                        <div class="col-3">
-                            <a href="#" class="fa fa-github"></a>
+                        <div class="col"><a href="#" class="fa fa-github" style="padding:0"></a>
+                        </div>
+                        <div class="col read-more-col">
+                            <a href="#"><img src='{% static "img/arrow_circle_up.png" %}' class='read-more' /></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-muted card-status">
+                    <div class="row">
+                        <p>Launched</p>
+
+                        <!-- <div class="col-3">
                         </div>
                         <div class="col-9">
                             <span class="badge rounded-pill bg-warning text-dark">Tag 1</span>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- <div class="row">
                         <div class="col-4">

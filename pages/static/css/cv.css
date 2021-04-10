@@ -1,0 +1,85 @@
+.section-header {
+  text-transform: uppercase;
+  font-weight: 200;
+  letter-spacing: 2px;
+  font-family: 'Montserrat';
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.section-header-icon{
+    width: 4%;
+    padding-right: 0.5%;
+}
+
+.company-name{
+    font-size: 22px;
+    font-weight:500;
+}
+
+.role {
+    letter-spacing: 1px;
+    font-weight: 200;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.type-of-work {
+    font-size: 10px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.work-dates{
+    font-size: 10px;
+    font-weight: 200;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+
+.work-location{
+    font-size: 10px;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.desc-item {
+    padding-bottom: 5%;
+    font-size: 14px;
+    font-family: 'Raleway';
+
+}
+
+.short-title {
+    font-weight: 900;
+    font-size: 17px;
+    font-family: 'Raleway';
+    text-transform: capitalize;
+}
+
+.project-details {
+    border-radius: 10px;
+  background-color: gold;
+  color: black;
+  font-family: 'Lato';
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.5;
+  border: 0px solid black;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.work-accomplishments {
+    list-style:none;
+}
+
+.work-accomplishments > .row > .col > li {
+    margin: 0;
+	padding: 0px 0 3% 5%;
+    background-image: url(../img/paperclip.svg);
+	background-repeat: no-repeat;
+	background-position: left top;
+	background-size: 25px;
+}

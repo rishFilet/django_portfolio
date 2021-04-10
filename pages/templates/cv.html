@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="container-fluid">
+    <div class="row py-4">
+        <div class="col-12">
+            <h2 class="section-header"><img src='{% static "img/briefcase.svg" %}' class="section-header-icon" />Industry Experience</h2>
+        </div>
+    </div>
+    {% for each_role in ie %}
+    <div class="row py-2">
+        <div class="col-12">
+            <div class="card mb-5 bg-white rounded">
+                <h2 class="card-header role">{{ each_role.role }}</h2>
+                {% for each_jd in jd %}
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h2 class="card-title company-name">{{ each_jd.company_name }}</h2>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col">
+                                    <h2 class="type-of-work">{{ each_jd.work_type }}</h2>
+                                </div>
+                                <div class="col">
+                                    <h2 class="work-dates">{{ each_jd.month_started }}/{{ each_jd.year_started }} -
+                                        12/03/21</h2>
+                                </div>
+                                <div class="col">
+                                    <h2 class="work-location">{{ each_jd.work_location }}</h2>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <ul class="work-accomplishments">
+                        {% for each_ja in ja %}
+                        <div class="row">
+                            <div class="col">
+                                <li class="desc-item"><span class="short-title">{{ each_ja.short_title }} </span>{{ each_ja.description }}</li>
+                            </div>
+                            <div class="col-2">
+                                {% if each_ja.project_id %}
+                                <button type="button" class="btn btn-secondary btn-sm project-details">Project Details</button>
+                                {% endif %}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
