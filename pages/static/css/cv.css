@@ -14,8 +14,29 @@
 }
 
 .company-name{
-    font-size: 22px;
+    font-size: 24px;
     font-weight:500;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.company-name > a{
+    text-decoration: none;
+    color: black;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: gold;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.company-name > a:hover{
+    color: #fff;
+    background-color: #5a6268;
+    border-color: #545b62;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .role {
@@ -26,13 +47,13 @@
 }
 
 .type-of-work {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
 }
 
 .work-dates{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
     white-space: nowrap;
@@ -40,7 +61,7 @@
 
 
 .work-location{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 200;
     font-style: italic;
 }
