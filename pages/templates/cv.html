@@ -11,63 +11,65 @@
     {% for each_role in ie %}
     <div class="row py-2">
         <div class="col-12">
-            <a data-toggle="collapse" href="#cardBodyCollapse-{{ each_role.role_id }}" aria-expanded="false"
-                aria-controls="cardBodyCollapse">
-                <div class="card mb-5 bg-white rounded">
+            <div class="card bg-white rounded">
+                <a class="card-header-link" data-toggle="collapse" href="#cardBodyCollapse-{{ each_role.role_id }}" aria-expanded="false"
+                    aria-controls="cardBodyCollapse-{{ each_role.role_id }}">
                     <h2 class="card-header role">
-                        {{ each_role.role }}</h2>
-                    <div class="collapse" id="cardBodyCollapse-{{ each_role.role_id }}">
-                        {% for each_jd in jd %}
-                        {% if each_jd.job_role == each_role %}
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col">
-                                    <h2 class="card-title company-name"><a href='{{ each_jd.company_link }}'>{{
-                                            each_jd.company_name }}</a></h2>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row">
-                                        <div class="col">
-                                            <h2 class="type-of-work">{{ each_jd.work_type }}</h2>
-                                        </div>
-                                        <div class="col">
-                                            <h2 class="work-dates">{{ each_jd.month_started }}/{{ each_jd.year_started
-                                                }} -
-                                                12/03/21</h2>
-                                        </div>
-                                        <div class="col">
-                                            <h2 class="work-location">{{ each_jd.work_location }}</h2>
-                                        </div>
+                        {{ each_role.role }}<svg xmlns='http://www.w3.org/2000/svg' class='ionicon arrow-icon' viewBox='0 0 512 512'>
+                            <title>Chevron Down</title>
+                            <path fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='48'
+                                d='M112 184l144 144 144-144' />
+                        </svg></h2>
+                </a>
+                <div class="collapse" id="cardBodyCollapse-{{ each_role.role_id }}">
+                    {% for each_jd in jd %}
+                    {% if each_jd.job_role == each_role %}
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h2 class="card-title company-name"><a href='{{ each_jd.company_link }}' target="_blank">{{ each_jd.company_name }}</a></h2>
+                            </div>
+                            <div class="col company-metadata">
+                                <div class="row">
+                                    <div class="col">
+                                        <span class="type-of-work">{{ each_jd.work_type }}</span>
                                     </div>
-
+                                    <div class="col">
+                                        <span class="work-dates">{{ each_jd.month_started }}/{{ each_jd.year_started }}
+                                            -
+                                            {{ each_jd.month_ended }}/{{ each_jd.year_ended }}</span>
+                                    </div>
+                                    <div class="col">
+                                        <span class="work-location">{{ each_jd.work_location }}</span>
+                                    </div>
                                 </div>
 
                             </div>
-                            <ul class="work-accomplishments">
-                                {% for each_ja in ja %}
-                                {% if each_ja.company == each_jd %}
-                                <div class="row">
-                                    <div class="col">
-                                        <li class="desc-item"><span class="short-title">{{ each_ja.short_title }}
-                                            </span>{{
-                                            each_ja.description }}</li>
-                                    </div>
-                                    <div class="col-2">
-                                        {% if each_ja.project_id %}
-                                        <button type="button" class="btn btn-secondary btn-sm project-details">Project
-                                            Details</button>
-                                        {% endif %}
-                                    </div>
-                                </div>
-                                {% endif %}
-                                {% endfor %}
-                            </ul>
+
                         </div>
-                        {% endif %}
-                        {% endfor %}
+                        <ul class="work-accomplishments">
+                            {% for each_ja in ja %}
+                            {% if each_ja.company == each_jd %}
+                            <div class="row">
+                                <div class="col">
+                                    <li class="desc-item"><span class="short-title">{{ each_ja.short_title }}
+                                        </span>{{ each_ja.description }}</li>
+                                </div>
+                                <div class="col-2">
+                                    {% if each_ja.project_id %}
+                                    <button type="button" class="btn btn-secondary btn-sm project-details">Project
+                                        Details</button>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
-            </a>
+            </div>
         </div>
     </div>
     {% endfor %}

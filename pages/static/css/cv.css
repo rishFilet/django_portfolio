@@ -39,12 +39,50 @@
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.company-metadata {
+    max-width:30%;
+}
+
 .role {
     letter-spacing: 1px;
     font-weight: 200;
     font-size: 15px;
     text-transform: uppercase;
 }
+
+.role:hover{
+    background-color: #5a6268;
+    border-color: #545b62;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
+}
+
+.card-header-link {
+    color: black;
+}
+
+.card-header-link:hover {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.arrow-icon {
+    width: 10%;
+    max-width: 20px;
+    float: right;
+    transition: transform .25s;
+}
+
+.arrow-icon.down {
+  transform: rotate(180deg);
+  transition: transform .25s;
+}
+
+.arrow-icon:hover {
+    color: white;
+}
+
 
 .type-of-work {
     font-size: 12px;
