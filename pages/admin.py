@@ -1,17 +1,19 @@
 from django.contrib import admin
-from pages.models import IndustryExperience, JobDescription, JobAccomplishment
+from pages.models import CardHeaders, Description, Accomplishment, CVSectionHeader
 # Register your models here.
 
-
-class IEAdmin(admin.ModelAdmin):
+class SHAdmin(admin.ModelAdmin):
+    pass
+class CHAdmin(admin.ModelAdmin):
     pass
 
-class JDAdmin(admin.ModelAdmin):
+class DescAdmin(admin.ModelAdmin):
     pass
 
-class JAAdmin(admin.ModelAdmin):
+class AccompAdmin(admin.ModelAdmin):
     pass
 
-admin.site.register(IndustryExperience, IEAdmin)
-admin.site.register(JobDescription, JDAdmin)
-admin.site.register(JobAccomplishment, JAAdmin)
+admin.site.register(CVSectionHeader, SHAdmin)
+admin.site.register(CardHeaders, CHAdmin)
+admin.site.register(Description, DescAdmin)
+admin.site.register(Accomplishment, AccompAdmin)

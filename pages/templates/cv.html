@@ -1,14 +1,17 @@
 {% extends "base.html" %}
 {% load static %}
 {% block page_content %}
-<div class="container-fluid">
-    <div class="row py-4">
+<div class="container-fluid main-container">
+    {% for each_header in sh %}
+    <div class="row py-3">
         <div class="col-12">
-            <h2 class="section-header"><img src='{% static "img/briefcase.svg" %}'
-                    class="section-header-icon" />Industry Experience</h2>
+            <h2 class="section-header"><img src="{{ each_header.section_image.url }}"
+                    class="section-header-icon" />{{ each_header.section_name }}</h2>
         </div>
     </div>
-    {% for each_role in ie %}
+
+    {% for each_role in ch %}
+    {% if each_role.section == each_header %}
     <div class="row py-2">
         <div class="col-12">
             <div class="card bg-white rounded">
@@ -22,12 +25,12 @@
                         </svg></h2>
                 </a>
                 <div class="collapse" id="cardBodyCollapse-{{ each_role.role_id }}">
-                    {% for each_jd in jd %}
+                    {% for each_jd in desc %}
                     {% if each_jd.job_role == each_role %}
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
-                                <h2 class="card-title company-name"><a href='{{ each_jd.company_link }}' target="_blank">{{ each_jd.company_name }}</a></h2>
+                                <h2 class="card-title company-name">{% if each_jd.logos %}<img src="{{ each_jd.logos.url }}" class="logos" />{% endif %}<a href='{{ each_jd.company_link }}' target="_blank">{{ each_jd.company_name }}</a></h2>
                             </div>
                             <div class="col company-metadata">
                                 <div class="row">
@@ -35,9 +38,9 @@
                                         <span class="type-of-work">{{ each_jd.work_type }}</span>
                                     </div>
                                     <div class="col">
-                                        <span class="work-dates">{{ each_jd.month_started }}/{{ each_jd.year_started }}
-                                            -
-                                            {{ each_jd.month_ended }}/{{ each_jd.year_ended }}</span>
+                                        <span class="work-dates">{% if each_jd.month_started != 0 %}{% if each_jd.month_started < 10 %}0{% endif %}{{ each_jd.month_started }}/{{ each_jd.year_started }}
+                                            {% endif %}{% if each_jd.month_ended != 0 and each_jd.month_started != 0 %}-{% endif %}{% if each_jd.month_ended != 0 %}
+                                            {% if each_jd.month_ended < 10 %}0{% endif %}{{ each_jd.month_ended }}/{{ each_jd.year_ended }}{% endif %}</span>
                                     </div>
                                     <div class="col">
                                         <span class="work-location">{{ each_jd.work_location }}</span>
@@ -48,12 +51,12 @@
 
                         </div>
                         <ul class="work-accomplishments">
-                            {% for each_ja in ja %}
+                            {% for each_ja in accomp %}
                             {% if each_ja.company == each_jd %}
                             <div class="row">
                                 <div class="col">
-                                    <li class="desc-item"><span class="short-title">{{ each_ja.short_title }}
-                                        </span>{{ each_ja.description }}</li>
+                                    <li class="desc-item">{% if each_ja.include_title == "yes" %}<span class="short-title">{{ each_ja.short_title }}
+                                        </span>{% endif %}{{ each_ja.description }}</li>
                                 </div>
                                 <div class="col-2">
                                     {% if each_ja.project_id %}
@@ -72,6 +75,8 @@
             </div>
         </div>
     </div>
+    {% endif %}
+    {% endfor %}
     {% endfor %}
 </div>
 {% endblock %}

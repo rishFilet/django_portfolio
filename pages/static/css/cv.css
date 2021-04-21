@@ -1,3 +1,7 @@
+.main-container {
+    padding-bottom: 10%;
+}
+
 .section-header {
   text-transform: uppercase;
   font-weight: 200;
@@ -6,11 +10,16 @@
   font-size: 22px;
   display: flex;
   align-items: center;
+  padding-top: 5%;
 }
 
 .section-header-icon{
     width: 4%;
     padding-right: 0.5%;
+}
+
+.logos{
+    width: 10%;
 }
 
 .company-name{
@@ -23,9 +32,10 @@
 .company-name > a{
     text-decoration: none;
     color: black;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.15); */
     border-radius: 5px;
-    background-color: gold;
+    border: 1px solid black;
+    /* background-color: black; */
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 1%;
